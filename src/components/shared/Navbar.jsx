@@ -94,12 +94,19 @@ export default function Navbar() {
                                     <Link href="/profile" className='flex items-center justify-center'>
                                         <Avatar
                                             src={user?.image || undefined}
-                                            name={user?.name || 'User'}
                                             size="sm"
                                             color="success"
-                                            className="w-8 h-8 rounded-full object-cover border border-border
-                                            cursor-pointer ring-2 ring-primary transition-transform hover:scale-105"
-                                        />
+                                            className="w-8 h-8 rounded-full border border-border cursor-pointer ring-2 ring-primary transition-transform hover:scale-105"
+                                        >
+                                            <Avatar.Fallback>
+                                                {(user?.name || 'User')
+                                                    .split(' ')
+                                                    .map((word) => word[0])
+                                                    .join('')
+                                                    .slice(0, 2)
+                                                    .toUpperCase()}
+                                            </Avatar.Fallback>
+                                        </Avatar>
                                     </Link>
 
                                     <span className='text-sm font-semibold text-foreground'>
@@ -139,11 +146,19 @@ export default function Navbar() {
                             <Link href="/profile">
                                 <Avatar
                                     src={user?.image || undefined}
-                                    name={user?.name || 'User'}
                                     size="sm"
                                     color="success"
-                                    className="cursor-pointer ring-2 ring-primary transition-transform hover:scale-105"
-                                />
+                                    className="w-8 h-8 rounded-full border border-border cursor-pointer ring-2 ring-primary transition-transform hover:scale-105"
+                                >
+                                    <Avatar.Fallback>
+                                        {(user?.name || 'User')
+                                            .split(' ')
+                                            .map((word) => word[0])
+                                            .join('')
+                                            .slice(0, 2)
+                                            .toUpperCase()}
+                                    </Avatar.Fallback>
+                                </Avatar>
                             </Link>
                         )}
 
