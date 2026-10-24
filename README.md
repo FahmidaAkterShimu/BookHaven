@@ -10,7 +10,18 @@ BookHaven is a modern digital library platform designed to help users explore an
 
 ## 🌐 Live URL
 
-🔗 Live Site: https://book-haven-project.vercel.app
+🔗 [View Live Website](https://book-haven-project.vercel.app)
+
+## Screenshots
+### Home Page
+![Home Page](./public/UI/BookHaven-HomePage.png)
+
+### All Books
+![All Books](./public/UI/BookHaven-AllBooks.png)
+
+### Profile
+![Profile](./public/UI/BookHaven-Profile.png)
+
 
 ## ✨ Key Features
 
