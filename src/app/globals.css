@@ -2,6 +2,7 @@
 @plugin "daisyui";
 @import "@heroui/styles";
 
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* =========================
    LIGHT THEME

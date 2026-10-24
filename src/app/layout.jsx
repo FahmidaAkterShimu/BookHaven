@@ -1,6 +1,7 @@
 import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
 import { Toaster } from "sonner";
+import NextThemeProvider from '@/providers/NextThemeProvider';
 
 // Body & UI font
 const inter = Inter({
@@ -29,10 +30,12 @@ export default function RootLayout({ children }) {
 			className={`${inter.variable} ${playfair.variable} h-screen antialiased`}
 		>
 			<body className='min-h-full flex flex-col font-(--font-inter)'>
-				<main className='min-h-screen'>
-					{children}
-				</main>
-				 <Toaster position="top-right" richColors />
+				<NextThemeProvider>
+					<main className='min-h-screen'>
+						{children}
+					</main>
+					<Toaster position="top-right" richColors />
+				</NextThemeProvider>
 			</body>
 		</html>
 	)
